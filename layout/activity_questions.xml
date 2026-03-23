@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuestionario 📝"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Edad -->
+        <EditText
+            android:id="@+id/edad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Edad"
+            android:inputType="number"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Peso -->
+        <EditText
+            android:id="@+id/peso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Peso (kg)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Enfermedad -->
+        <EditText
+            android:id="@+id/enfermedad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="¿Alguna enfermedad?"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Meta -->
+        <EditText
+            android:id="@+id/meta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meta (bajar, subir, mantener)"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Presupuesto -->
+        <EditText
+            android:id="@+id/presupuesto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Presupuesto ($)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Botón -->
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar y continuar"/>
+
+    </LinearLayout>
+</ScrollView>
