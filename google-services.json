@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "283120042931",
+    "firebase_url": "https://appbarron-default-rtdb.firebaseio.com",
+    "project_id": "appbarron",
+    "storage_bucket": "appbarron.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283120042931:android:c4cfb98d554a58d3a881c6",
+        "android_client_info": {
+          "package_name": "com.appbarron"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-FTflgt1YhIzOfsaldesvxy4JJafMAXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
