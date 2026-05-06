@@ -8,12 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:283120042931:android:c4cfb98d554a58d3a881c6",
+        "mobilesdk_app_id": "1:283120042931:android:97333109dcb6634ca881c6",
         "android_client_info": {
-          "package_name": "com.appbarron"
+          "package_name": "com.barron"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "283120042931-in26g6v90hupf6a7kvpvh0tvu90hnqie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC-FTflgt1YhIzOfsaldesvxy4JJafMAXk"
@@ -21,7 +26,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283120042931-in26g6v90hupf6a7kvpvh0tvu90hnqie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

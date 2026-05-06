@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="#000000">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,35 +10,27 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Título -->
         <TextView
-            android:id="@+id/tvTitle"
-            android:text="Tu Progreso"
-            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥 Tu Progreso"
+            android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="@color/primaryDark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textColor="@color/white"/>
 
-        <!-- Subtítulo -->
         <TextView
-            android:id="@+id/tvSubtitle"
-            android:text="Seguimiento diario"
-            android:textSize="16sp"
-            android:textColor="@color/textPrimary"
-            android:layout_marginBottom="20dp"
-            android:alpha="0.7"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Seguimiento de calorías en tiempo real"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:alpha="0.7"
+            android:layout_marginBottom="20dp"/>
 
-        <!-- Card -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp"
-            android:layout_marginBottom="20dp"
-            app:cardBackgroundColor="@color/white">
+            android:layout_marginBottom="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,46 +38,34 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <!-- Progreso texto -->
-                <TextView
-                    android:id="@+id/tvProgress"
-                    android:text="Progreso: 0%"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primaryDark"
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <!-- Barra de progreso -->
-                <com.google.android.material.progressindicator.LinearProgressIndicator
-                    android:id="@+id/progressBar"
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:progress="0"
-                    app:indicatorColor="@color/primary"
-                    app:trackColor="@color/primaryLight"/>
+                    android:layout_height="250dp"/>
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Info adicional -->
         <TextView
             android:id="@+id/tvCalories"
-            android:text="Calorías consumidas: 0 kcal"
-            android:textSize="16sp"
-            android:textColor="@color/textPrimary"
-            android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Consumido: 0 kcal"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/tvGoal"
-            android:text="Meta diaria: 2000 kcal"
-            android:textSize="16sp"
-            android:textColor="@color/textPrimary"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Meta: 0 kcal"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restante: 0 kcal"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 </ScrollView>

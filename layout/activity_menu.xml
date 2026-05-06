@@ -3,75 +3,86 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="#000000">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="20dp">
 
-        <!-- TÍTULO -->
+        <!-- HEADER -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Menú principal"
-            android:textSize="24sp"
+            android:text="🍏 Menú principal"
+            android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="@color/primaryDark"
-            android:layout_marginBottom="24dp"/>
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"/>
 
-        <!-- BOTONES -->
-        <Button
-            android:id="@+id/btnComidas"
+        <!-- DASHBOARD CARD -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Comidas del día"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="@color/primary"
-            android:textColor="@color/white"/>
+            android:orientation="vertical"
+            android:background="#111111"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
 
-        <Button
-            android:id="@+id/btnMapa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Mapa"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="@color/primary"
-            android:textColor="@color/white"/>
+            <Button
+                android:id="@+id/btnComidas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🍽 Comidas del día"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"/>
 
-        <Button
-            android:id="@+id/btnProgreso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Progreso"
-            android:layout_marginBottom="24dp"
-            android:backgroundTint="@color/primary"
-            android:textColor="@color/white"/>
+            <Button
+                android:id="@+id/btnMapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🗺 Mapa de tiendas"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnProgreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 Mi progreso"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"/>
+        </LinearLayout>
 
         <!-- CONFIGURACIÓN -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Configurar recordatorios"
-            android:textSize="18sp"
+            android:text="⏰ Recordatorios"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/primaryDark"
+            android:textColor="@color/white"
             android:layout_marginBottom="12dp"/>
 
-        <!-- DESAYUNO -->
+        <!-- CARD DESAYUNO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="10dp">
+            android:background="#111111"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Desayuno"
+                android:text="🥐 Desayuno"
+                android:textColor="@color/white"
                 android:textSize="16sp"/>
 
             <Switch
@@ -83,22 +94,27 @@
                 android:id="@+id/btnHoraBreakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00"/>
+                android:text="08:00"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
-        <!-- COMIDA -->
+        <!-- CARD COMIDA -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="10dp">
+            android:background="#111111"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Comida"
+                android:text="🍛 Comida"
+                android:textColor="@color/white"
                 android:textSize="16sp"/>
 
             <Switch
@@ -110,22 +126,26 @@
                 android:id="@+id/btnHoraLunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="14:00"/>
+                android:text="14:00"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
-        <!-- CENA -->
+        <!-- CARD CENA -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="20dp">
+            android:background="#111111"
+            android:padding="14dp"
+            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Cena"
+                android:text="🌙 Cena"
+                android:textColor="@color/white"
                 android:textSize="16sp"/>
 
             <Switch
@@ -137,7 +157,9 @@
                 android:id="@+id/btnHoraDinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="20:00"/>
+                android:text="20:00"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
     </LinearLayout>
