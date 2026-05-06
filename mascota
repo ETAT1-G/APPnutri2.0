@@ -1,0 +1,13 @@
+package com.tuapp.gato;
+
+public class GatoUIModel {
+    public final int imagenRes;
+    public final String mensaje;
+    public final boolean hablar;
+
+    public GatoUIModel(int imagenRes, String mensaje, boolean hablar) {
+        this.imagenRes = imagenRes;
+        this.mensaje = mensaje;
+        this.hablar = hablar;
+    }
+}
