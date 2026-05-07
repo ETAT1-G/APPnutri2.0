@@ -1,49 +1,39 @@
-package com.barron
+package com.tu.paquete // Asegúrate de tener tu package name real aquí
 
-import android.content.Intent
-import android.content.SharedPreferences
-import android.os.Bundle
-import android.widget.*
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var prefs: SharedPreferences
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        prefs = getSharedPreferences("USER_DATA", MODE_PRIVATE)
-
-        if (prefs.contains("nombre")) {
-            startActivity(Intent(this, MenuActivity::class.java))
-            finish()
-        }
-
         setContentView(R.layout.activity_main)
 
-        val nombre = findViewById<EditText>(R.id.etNombre)
-        val edad = findViewById<EditText>(R.id.etEdad)
-        val peso = findViewById<EditText>(R.id.etPeso)
-        val enfermedad = findViewById<EditText>(R.id.etEnfermedad)
-        val presupuesto = findViewById<EditText>(R.id.etPresupuesto)
-        val objetivo = findViewById<Spinner>(R.id.spObjetivo)
-        val boton = findViewById<Button>(R.id.btnGuardar)
+        val miGato = findViewById<ImageView>(R.id.ivMascota)
+        val btnTerminar = findViewById<Button>(R.id.btnTerminar)
 
-        val opciones = arrayOf("Bajar peso", "Subir masa", "Mantener")
-        objetivo.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, opciones)
+        // 1. Iniciamos la animación normal (la lenta)
+        miGato.setImageResource(R.drawable.animacion_gato)
+        val animacionLenta = miGato.drawable as AnimationDrawable
+        animacionLenta.start()
 
-        boton.setOnClickListener {
-            val editor = prefs.edit()
-            editor.putString("nombre", nombre.text.toString())
-            editor.putString("edad", edad.text.toString())
-            editor.putString("peso", peso.text.toString())
-            editor.putString("enfermedad", enfermedad.text.toString())
-            editor.putString("presupuesto", presupuesto.text.toString())
-            editor.putString("objetivo", objetivo.selectedItem.toString())
-            editor.apply()
+        // 2. Configuramos qué pasa al presionar el botón
+        btnTerminar.setOnClickListener {
+            
+            // Detenemos la animación actual
+            animacionLenta.stop()
 
-            startActivity(Intent(this, MenuActivity::class.java))
+            // Cambiamos a la animación rápida
+            miGato.setImageResource(R.drawable.animacion_gato_rapida)
+            val animacionRapida = miGato.drawable as AnimationDrawable
+            animacionRapida.start()
+
+            // Mostramos un mensaje de felicitación
+            Toast.makeText(this, "¡Excelente trabajo! ¡El gato está orgulloso!", Toast.LENGTH_LONG).show()
         }
     }
 }
